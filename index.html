@@ -504,16 +504,13 @@
             function switchTheme(event) {
                 event.preventDefault();
 
-                const body = getElements("getElementsByTagName", "body");
-                const navs = getElements("getElementsByTagName", "nav");
-                const wides = getElements("getElementsByClassName", "column");
-                const cards = getElements("getElementsByClassName", "card");
-                const tables = getElements("getElementsByTagName", "table");
-                const callouts = getElements(
-                    "getElementsByClassName",
-                    "bg-gradient"
-                );
-                const headers = getElements("getElementsByTagName", "h1");
+                const body = getElements("CHANGE ME", "body");
+                const navs = getElements("CHANGE ME", "nav");
+                const wides = getElements("CHANGE ME", "column");
+                const cards = getElements("CHANGE ME", "card");
+                const tables = getElements("CHANGE ME", "table");
+                const callouts = getElements("CHANGE ME", "bg-gradient");
+                const headers = getElements("CHANGE ME", "h1");
 
                 const elementsAndClasses = [
                     [body, bodyClasses],
@@ -529,16 +526,9 @@
                 }
 
                 for (let head of headers) {
-                    let t = head.innerText;
-                    let index = headerTexts.indexOf(t);
-                    index = (index + 1) % headerTexts.length;
-
-                    head.innerText = headerTexts[index];
+                    // IMPLEMENT ME
                 }
             }
-
-            const themeSwitcher = document.getElementById("themeSwitch");
-            themeSwitcher.addEventListener("click", switchTheme);
         </script>
     </body>
 </html>
