@@ -483,6 +483,8 @@
                 "This is the Light theme",
                 "This is the Dark theme",
             ];
+            
+            const lastNav = document.querySelector("nav:last-of-type > div");
 
             function changeElementClasses(elementArray, classArray) {
                 for (let element of elementArray) {
@@ -529,6 +531,12 @@
                     index = (index + 1) % headerTexts.length;
 
                     head.innerText = headerTexts[index];
+                }
+            
+                if (lastNav.hasAttribute("style")) {
+                    lastNav.removeAttribute("style");
+                } else {
+                    lastNav.style.flexDirection = "row-reverse";
                 }
             }
 
