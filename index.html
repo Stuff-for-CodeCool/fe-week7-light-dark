@@ -480,9 +480,11 @@
             const tableClasses = ["table-dark"];
             const calloutClasses = ["bg-warning", "bg-info", "text-dark"];
             const headerTexts = [
-                "This is the Light theme",
-                "This is the Dark theme",
+            "This is the Light theme",
+            "This is the Dark theme",
             ];
+            
+            const lastNav = document.querySelector("nav:last-of-type");
 
             function changeElementClasses(elementArray, classArray) {
                 for (let element of elementArray) {
